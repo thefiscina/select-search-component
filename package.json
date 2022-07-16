@@ -1,0 +1,15 @@
+{
+  "name": "select-search",
+  "version": "1.0.0",
+  "description": "dropdown select com pesquisa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dropdown",
+    "select"
+  ],
+  "author": "jonathas david fiscina assis",
+  "license": "ISC"
+}
