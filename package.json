@@ -1,6 +1,6 @@
 {
   "name": "select-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "dropdown select com pesquisa",
   "main": "index.js",
   "scripts": {
