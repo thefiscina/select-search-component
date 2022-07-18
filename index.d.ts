@@ -1,8 +1,8 @@
 import type * as React from "react";
 import { StyleProp, ViewStyle, TextStyle } from "react-native";
 
-declare module "react-native-select-dropdown" {
-  export type SelectDropdownProps = {
+declare module "select-search" {
+  export type SelectSearchprops = {
     /**
       * array of data that will be represented in dropdown, can be array of objects
       */
@@ -31,6 +31,11 @@ declare module "react-native-select-dropdown" {
      * default selected item index
      */
     defaultValueByIndex?: number;
+    /**
+     * selected item in dropdown
+     */
+
+    valueSelected:any;
     /**
      * disable dropdown
      */
@@ -129,7 +134,7 @@ declare module "react-native-select-dropdown" {
     renderSearchInputRightIcon?: (selectedItem: any, index: number) => React.ReactNode;
   };
 
-  export default class SelectDropdown extends React.Component<SelectDropdownProps> {
+  export default class SelectSearch extends React.Component<SelectSearchprops> {
     /**
      * Remove selection & reset it to display defaultButtonText check
      */

@@ -34,11 +34,11 @@ yarn add react-native-select-dropdown
 ## Usage
 
 ```
-import SelectDropdown from 'react-native-select-dropdown'
+import SelectSearch from 'select-search'
 ...
 const countries = ["Egypt", "Canada", "Australia", "Ireland"]
 ...
-<SelectDropdown
+<SelectSearch
 	data={countries}
 	onSelect={(selectedItem, index) => {
 		console.log(selectedItem, index)

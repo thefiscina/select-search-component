@@ -1,3 +1,3 @@
-import SelectDropdown from './src/SelectDropdown';
+import SelectSearch from './src/SelectSearch';
 
-export default SelectDropdown;
+export default SelectSearch;
