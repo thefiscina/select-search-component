@@ -91,7 +91,7 @@ const SelectSearch = (
 
   // SETAR VALOR SELECIONADO
   useEffect(() => {
-    // defaultValueByIndex may be equals zero
+    // valueSelected may be equals zero
     if (isExist(valueSelected)) {
       console.log(`INDEX SELECIONADO`, valueSelected)
       if (data && isExist(data[valueSelected])) {
