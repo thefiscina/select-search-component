@@ -68,6 +68,7 @@ const SelectSearch = (
   const [buttonLayout, setButtonLayout] = useState(null);
   const [dropdownPX, setDropdownPX] = useState(0); // position x
   const [dropdownPY, setDropdownPY] = useState(0); // position y
+  // const [dropdownHEIGHT, setDropdownHEIGHT] = useState(150); // dropdown height
   const [dropdownHEIGHT, setDropdownHEIGHT] = useState(() => {
     return calculateDropdownHeight(dropdownStyle, rowStyle, data?.length || 0, search);
   }); // dropdown height
@@ -86,14 +87,12 @@ const SelectSearch = (
   useEffect(() => {
     if (!data || data.length == 0) {
       reset();
-    }
+    }    
   }, [data]);
 
   // SETAR VALOR SELECIONADO
   useEffect(() => {
-    // valueSelected may be equals zero
     if (isExist(valueSelected)) {
-      console.log(`INDEX SELECIONADO`, valueSelected)
       if (data && isExist(data[valueSelected])) {
         setDefault(valueSelected);
       }
@@ -141,26 +140,30 @@ const SelectSearch = (
       onFocus && onFocus();
     });
   };
+
   const closeDropdown = () => {
     setIsVisible(false);
     setSearchTxt('');
     onBlur && onBlur();
   };
+
   const reset = () => {
     setSelectedItem(null);
     setSelectedIndex(-1);
     setSearchTxt('');
   };
+
   const setDefault = index => {
     setSelectedItem(data[index]);
     setSelectedIndex(index);
   };
-  
+
   const getItemLayout = (data, index) => ({
     index,
     length: data?.length || 0,
     offset: rowStyle && rowStyle.height ? rowStyle.height * index : 50 * index,
   });
+
   const onLayout = () => {
     if (disableAutoScroll) {
       return;
@@ -189,7 +192,7 @@ const SelectSearch = (
             valueColor={searchInputTxtColor}
             placeholder={searchPlaceHolder}
             placeholderTextColor={searchPlaceHolderColor}
-            onChangeText={setSearchTxt}
+            onChangeText={(text) => { console.log(text), setSearchTxt(text) }}
             inputStyle={searchInputStyle}
             renderLeft={renderSearchInputLeftIcon}
             renderRight={renderSearchInputRightIcon}
