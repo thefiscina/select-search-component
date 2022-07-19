@@ -1,19 +1,19 @@
-# react-native-select-dropdown
+# select-search-component
 
-react-native-select-dropdown is a highly customized dropdown | select | picker | menu for react native that works for andriod and iOS platforms.
+select-search-component
 
 ## Installation
 
 #### # Using npm
 
 ```bash
-npm install react-native-select-dropdown
+npm install https://github.com/thefiscina/select-search-component.git
 ```
 
 #### # Using yarn
 
 ```bash
-yarn add react-native-select-dropdown
+yarn add https://github.com/thefiscina/select-search-component.git
 ```
 
 ## Demo
