@@ -31,7 +31,10 @@ const contains = (query, item) => {
 };
 
 export const deepSearchInArr = (query, arr) => {
-  return arr.filter(x => x.Nome.toLowerCase().includes(query.toLowerCase()));
+  return arr.filter(x => x.Nome.normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .toLowerCase().includes(query.normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "").toLowerCase()));
   // let array = [];
   // console.log(arr)
   // for (let i = 0; i < arr.length; i++) {
